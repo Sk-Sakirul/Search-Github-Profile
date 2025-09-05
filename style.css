@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.search {
+  width: 50%;
+  max-width: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 999px;
+}
+
+.search input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.primary-btn {
+  border: none;
+  font-size: 1.6rem;
+  padding: 1.3rem;
+  border-radius: 999px;
+  background-color: rgb(70, 70, 244);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: rgb(4, 4, 248);
+  transition: 0.3s ease-in;
+}
+
+/* **Card Design** */
+.profile-container {
+  width: 50%;
+  max-width: 50rem;
+  height: 50%;
+  max-height: 28rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.profile-container:hover {
+  transform: rotate(-3deg);
+  transition: 0.5s ease-in-out;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar img {
+  border-radius: 100%;
+}
+
+.self {
+  font-size: 0.7rem;
+}
+
+.top-section .primary-btn {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.about {
+}
+
+.status {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .container > h1 {
+    font-size: 3rem;
+  }
+
+  .search input {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .primary-btn {
+    font-size: 1.2rem;
+  }
+
+  .profile-container {
+    width: 50%;
+    max-width: 45rem;
+    height: 50%;
+    max-height: 50rem;
+  }
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .self {
+    font-size: 0.5rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about {
+    text-align: center;
+  }
+}
+
+@media (max-width: 310px) {
+  .status {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .status-item {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
